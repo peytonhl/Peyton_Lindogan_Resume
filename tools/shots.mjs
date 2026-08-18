@@ -33,6 +33,9 @@ const shots = [
   ["mobile-home", { width: 390, height: 844 }, "", 0],
   ["mobile-home-mid", { width: 390, height: 844 }, "", 1500],
   ["mobile-projects", { width: 390, height: 844 }, "projects.html", 900],
+  ["desktop-ladder", { width: 1440, height: 900 }, "ladder.html", 0],
+  ["desktop-ladder-mid", { width: 1440, height: 900 }, "ladder.html", 1500],
+  ["mobile-ladder", { width: 390, height: 844 }, "ladder.html", 1200],
 ];
 for (const [name, viewport, path, scroll] of shots) {
   const page = await browser.newPage({ viewport, deviceScaleFactor: 2 });

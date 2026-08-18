@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         projects: resolve(__dirname, "projects.html"),
+        ladder: resolve(__dirname, "ladder.html"),
       },
     },
   },
