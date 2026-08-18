@@ -1,10 +1,11 @@
 import "./styles.css";
-import { mountLoadCurve } from "./loadcurve.js";
+import { mountNetLoad } from "./netload.js";
 
-mountLoadCurve(document.getElementById("loadcurve"));
+mountNetLoad(document.getElementById("netload"));
 
-/* Sections energize as they come into view: the node lights and current
-   starts running that segment of the conductor. */
+/* Current runs the conductor of whichever section you are reading. This is
+   the one motion kept: it is the diagram doing what the diagram depicts,
+   not a fade-in. */
 const sections = document.querySelectorAll(".section");
 if ("IntersectionObserver" in window) {
   const live = new IntersectionObserver(
@@ -14,25 +15,10 @@ if ("IntersectionObserver" in window) {
     { rootMargin: "-12% 0px -30% 0px" }
   );
   sections.forEach((s) => live.observe(s));
-
-  const reveal = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add("is-in");
-          reveal.unobserve(e.target);
-        }
-      });
-    },
-    { rootMargin: "0px 0px -8% 0px", threshold: 0.06 }
-  );
-  document.querySelectorAll(".reveal").forEach((el) => reveal.observe(el));
 } else {
   sections.forEach((s) => s.classList.add("is-live"));
-  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-in"));
 }
 
-/* Year in the footer, so it never goes stale. */
 document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = String(new Date().getFullYear());
 });

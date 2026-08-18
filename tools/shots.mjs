@@ -27,7 +27,7 @@ const browser = await chromium.launch({ executablePath: process.env.PW_CHROME ||
 const shots = [
   ["desktop-home", { width: 1440, height: 900 }, "", 0],
   ["desktop-focus", { width: 1440, height: 900 }, "", 1050],
-  ["desktop-home-metrics", { width: 1440, height: 900 }, "", 3400],
+  ["desktop-metrics", { width: 1440, height: 900 }, "", 3100],
   ["desktop-projects", { width: 1440, height: 900 }, "projects.html", 0],
   ["desktop-projects-mid", { width: 1440, height: 900 }, "projects.html", 1100],
   ["mobile-home", { width: 390, height: 844 }, "", 0],

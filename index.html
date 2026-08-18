@@ -17,8 +17,47 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
+<svg class="sld-defs" aria-hidden="true" focusable="false"><defs>
+  <g id="sld-generator" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <line x1="20" y1="0" x2="20" y2="19"/><circle cx="20" cy="32" r="13"/>
+    <path d="M13 32 q3.5 -6 7 0 t7 0"/><line x1="20" y1="45" x2="20" y2="64"/>
+  </g>
+  <g id="sld-breaker" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <line x1="20" y1="0" x2="20" y2="21"/><rect x="11" y="21" width="18" height="22"/>
+    <line x1="20" y1="43" x2="20" y2="64"/>
+  </g>
+  <g id="sld-transformer" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <line x1="20" y1="0" x2="20" y2="16"/><circle cx="20" cy="25" r="9"/>
+    <circle cx="20" cy="39" r="9"/><line x1="20" y1="48" x2="20" y2="64"/>
+  </g>
+  <g id="sld-bus" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <line x1="20" y1="0" x2="20" y2="24"/><line x1="4" y1="26" x2="36" y2="26" stroke-width="3.4"/>
+    <line x1="9" y1="26" x2="9" y2="42"/><line x1="20" y1="26" x2="20" y2="42"/>
+    <line x1="31" y1="26" x2="31" y2="42"/><line x1="20" y1="42" x2="20" y2="64"/>
+  </g>
+  <g id="sld-storage" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <line x1="20" y1="0" x2="20" y2="23"/><line x1="8" y1="23" x2="32" y2="23"/>
+    <line x1="14" y1="29" x2="26" y2="29"/><line x1="8" y1="35" x2="32" y2="35"/>
+    <line x1="14" y1="41" x2="26" y2="41"/><line x1="20" y1="41" x2="20" y2="64"/>
+  </g>
+  <g id="sld-disconnect" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <line x1="20" y1="0" x2="20" y2="23"/><circle cx="20" cy="23" r="1.9" fill="currentColor" stroke="none"/>
+    <line x1="20" y1="23" x2="31" y2="38"/><circle cx="20" cy="41" r="1.9" fill="currentColor" stroke="none"/>
+    <line x1="20" y1="41" x2="20" y2="64"/>
+  </g>
+  <g id="sld-ground" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <line x1="20" y1="0" x2="20" y2="64"/>
+    <line x1="20" y1="23" x2="29" y2="23"/><line x1="29" y1="23" x2="29" y2="33"/>
+    <line x1="21" y1="33" x2="37" y2="33"/><line x1="24" y1="39" x2="34" y2="39"/>
+    <line x1="27" y1="45" x2="31" y2="45"/>
+  </g>
+  <g id="sld-load" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+    <line x1="20" y1="0" x2="20" y2="47"/><path d="M13 38 L20 47 L27 38"/>
+  </g>
+</defs></svg>
+
 <header class="topbar">
-  <a class="topbar__mark" href="./"><span class="bolt" aria-hidden="true"></span> Peyton Lindogan</a>
+  <a class="topbar__mark" href="./"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7 12 q2.5 -4.5 5 0 t5 0"/></svg> Peyton Lindogan</a>
   <nav class="topbar__nav" aria-label="Primary">
     <a href="#experience">Experience</a>
     <a href="./projects.html">Projects</a>
@@ -30,39 +69,58 @@
 
   <!-- ── hero ─────────────────────────────────────────────── -->
   <section class="hero">
-    <canvas id="loadcurve" aria-hidden="true"></canvas>
-    <div class="hero__inner">
-      <div class="hero__kicker">
-        <span class="dot" aria-hidden="true"></span>
-        <span class="mono">Energy transition</span>
-        <span class="mono">Data products</span>
-        <span class="mono">Grid modernization</span>
+    <div class="hero__grid">
+      <div>
+        <div class="hero__kicker">
+          <span class="mono">Energy transition</span>
+          <span class="mono sep">/</span>
+          <span class="mono">Data products</span>
+          <span class="mono sep">/</span>
+          <span class="mono">Grid modernization</span>
+        </div>
+        <h1>I build data products for the energy value chain.</h1>
+        <p class="hero__sub">
+          I work in energy because I care about where the grid is headed. My work sits
+          inside enterprise data and modernization programs across generation operations,
+          energy trading, distributed energy and SAP financial systems, and the point of it
+          is helping energy organizations make better decisions.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="./projects.html">See what I build</a>
+          <a class="btn" href="#experience">Experience</a>
+          <a class="btn" href="./Peyton-Lindogan-Resume.pdf" download>Resume, PDF</a>
+        </div>
       </div>
-      <h1>I build data products for the <em>energy value chain</em>.</h1>
-      <p class="hero__sub">
-        I work in energy because I care about where the grid is headed. My work sits
-        inside enterprise data and modernization programs across generation operations,
-        energy trading, distributed energy and SAP financial systems, and the point of it
-        is helping energy organizations make better decisions.
-      </p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="./projects.html">See what I build</a>
-        <a class="btn" href="#experience">Experience</a>
-        <a class="btn" href="./Peyton-Lindogan-Resume.pdf" download>Resume, PDF</a>
-      </div>
+
+      <figure class="chart">
+        <div class="chart__head">
+          <span class="chart__title">Net load, spring day</span>
+          <span class="chart__unit">GW by hour</span>
+        </div>
+        <canvas id="netload" role="img" aria-label="Daily load curve. Gross demand peaks in the evening near 39 gigawatts. Midday solar pushes net load down to roughly 18 gigawatts, then falls away, producing a steep three hour evening ramp."></canvas>
+        <div class="chart__legend">
+          <span><i class="swatch swatch--gross" aria-hidden="true"></i>Gross load</span>
+          <span><i class="swatch swatch--net" aria-hidden="true"></i>Net load after solar</span>
+          <span><i class="swatch swatch--solar" aria-hidden="true"></i>Solar</span>
+        </div>
+        <figcaption class="chart__note">
+          Illustrative shape, not measured data. The midday belly is solar. The evening
+          ramp is what the rest of the system has to cover when it drops, and that ramp is
+          most of what my work is actually about.
+        </figcaption>
+      </figure>
     </div>
   </section>
 
   <!-- ── 01 focus ─────────────────────────────────────────── -->
   <section class="section" id="focus">
     <div class="section__rail" aria-hidden="true"></div>
-    <div class="section__node" aria-hidden="true"></div>
-    <div class="section__head reveal">
-      <span class="section__num mono">01 / Focus</span>
+    <svg class="section__device" viewBox="0 0 40 64" aria-hidden="true"><use href="#sld-generator"/></svg>
+    <div class="section__head">
       <h2>Why energy</h2>
     </div>
 
-    <div class="reveal">
+    <div>
       <p class="statement">
         Modernizing energy systems shapes how efficiently power is delivered, how costs
         are managed, and how feasible it becomes to integrate cleaner generation at scale.
@@ -87,16 +145,15 @@
   <!-- ── 02 position ──────────────────────────────────────── -->
   <section class="section" id="position">
     <div class="section__rail" aria-hidden="true"></div>
-    <div class="section__node" aria-hidden="true"></div>
-    <div class="section__head reveal">
-      <span class="section__num mono">02 / Position</span>
+    <svg class="section__device" viewBox="0 0 40 64" aria-hidden="true"><use href="#sld-breaker"/></svg>
+    <div class="section__head">
       <h2>What I am actually good at</h2>
       <p class="section__lede">
         Three claims. Each one has a delivery behind it, not an adjective.
       </p>
     </div>
 
-    <div class="claims reveal">
+    <div class="claims">
       <article class="claim">
         <h3>I prototype, then hand off</h3>
         <p>
@@ -135,16 +192,15 @@
   <!-- ── 03 experience ────────────────────────────────────── -->
   <section class="section" id="experience">
     <div class="section__rail" aria-hidden="true"></div>
-    <div class="section__node" aria-hidden="true"></div>
-    <div class="section__head reveal">
-      <span class="section__num mono">03 / Experience</span>
+    <svg class="section__device" viewBox="0 0 40 64" aria-hidden="true"><use href="#sld-transformer"/></svg>
+    <div class="section__head">
       <h2>Delivery record</h2>
       <p class="section__lede">
         Dollar figures are on the resume rather than the open web. The scale is here.
       </p>
     </div>
 
-    <div class="reveal">
+    <div>
       <article class="role">
         <div class="role__head">
           <h3 class="role__title">Data Product Manager <span>· NextEra Energy</span></h3>
@@ -181,12 +237,11 @@
   <!-- ── 04 scale ─────────────────────────────────────────── -->
   <section class="section" id="scale">
     <div class="section__rail" aria-hidden="true"></div>
-    <div class="section__node" aria-hidden="true"></div>
-    <div class="section__head reveal">
-      <span class="section__num mono">04 / Scale</span>
+    <svg class="section__device" viewBox="0 0 40 64" aria-hidden="true"><use href="#sld-bus"/></svg>
+    <div class="section__head">
       <h2>The numbers I am accountable for</h2>
     </div>
-    <div class="metrics reveal">
+    <div class="metrics">
       <div class="metric"><div class="metric__value">100<small>+</small></div><div class="metric__label">Users given Databricks self service</div></div>
       <div class="metric"><div class="metric__value">19</div><div class="metric__label">Business units negotiated onto one reporting scope</div></div>
       <div class="metric"><div class="metric__value">700</div><div class="metric__label">Report scope committed, down from 1,500+ requested</div></div>
@@ -205,9 +260,8 @@
   <!-- ── 05 building ──────────────────────────────────────── -->
   <section class="section" id="building">
     <div class="section__rail" aria-hidden="true"></div>
-    <div class="section__node" aria-hidden="true"></div>
-    <div class="section__head reveal">
-      <span class="section__num mono">05 / Building</span>
+    <svg class="section__device" viewBox="0 0 40 64" aria-hidden="true"><use href="#sld-storage"/></svg>
+    <div class="section__head">
       <h2>I ship my own software</h2>
       <p class="section__lede">
         The job title says product manager. The reason I can direct engineering is that I
@@ -216,7 +270,7 @@
       </p>
     </div>
 
-    <div class="claims reveal">
+    <div class="claims">
       <article class="claim">
         <h3>Contour</h3>
         <p>
@@ -249,7 +303,7 @@
       </article>
     </div>
 
-    <div class="hero__cta reveal" style="margin-top: 34px;">
+    <div class="hero__cta" style="margin-top: 34px;">
       <a class="btn btn--primary" href="./projects.html">Read the project write ups</a>
     </div>
   </section>
@@ -257,13 +311,12 @@
   <!-- ── 06 toolkit ───────────────────────────────────────── -->
   <section class="section" id="toolkit">
     <div class="section__rail" aria-hidden="true"></div>
-    <div class="section__node" aria-hidden="true"></div>
-    <div class="section__head reveal">
-      <span class="section__num mono">06 / Toolkit</span>
+    <svg class="section__device" viewBox="0 0 40 64" aria-hidden="true"><use href="#sld-disconnect"/></svg>
+    <div class="section__head">
       <h2>Tools, and where they came from</h2>
     </div>
 
-    <div class="stack reveal">
+    <div class="stack">
       <div class="stack__row">
         <div class="stack__label">Data platform</div>
         <div class="chips">
@@ -294,13 +347,12 @@
   <!-- ── 07 background ────────────────────────────────────── -->
   <section class="section" id="background">
     <div class="section__rail" aria-hidden="true"></div>
-    <div class="section__node" aria-hidden="true"></div>
-    <div class="section__head reveal">
-      <span class="section__num mono">07 / Background</span>
+    <svg class="section__device" viewBox="0 0 40 64" aria-hidden="true"><use href="#sld-ground"/></svg>
+    <div class="section__head">
       <h2>Education and community</h2>
     </div>
 
-    <div class="reveal">
+    <div>
       <article class="role">
         <div class="role__head">
           <h3 class="role__title">University of California, Berkeley <span>· M.S. Information and Data Science</span></h3>
@@ -334,11 +386,10 @@
   </section>
 
   <!-- ── contact ──────────────────────────────────────────── -->
-  <section class="section" id="contact">
+  <section class="section section--terminal" id="contact">
     <div class="section__rail" aria-hidden="true"></div>
-    <div class="section__node" aria-hidden="true"></div>
-    <div class="section__head reveal">
-      <span class="section__num mono">08 / Contact</span>
+    <svg class="section__device" viewBox="0 0 40 64" aria-hidden="true"><use href="#sld-load"/></svg>
+    <div class="section__head">
       <h2>Get in touch</h2>
       <p class="section__lede">
         I am interested in the practical side of the energy transition, and in the
@@ -347,7 +398,7 @@
       </p>
     </div>
 
-    <div class="contact reveal">
+    <div class="contact">
       <div class="contact__lines">
         <a class="contact__line" href="mailto:peyton2117@gmail.com">
           <span>Email</span><span>peyton2117@gmail.com</span>
