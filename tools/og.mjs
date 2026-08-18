@@ -1,0 +1,10 @@
+import { chromium } from "playwright";
+const browser = await chromium.launch({ executablePath: process.env.PW_CHROME });
+const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
+page.on("console", m => console.log("[page]", m.text()));
+page.on("pageerror", e => console.log("[err]", e.message));
+await page.goto(new URL("./og.html", import.meta.url).href, { waitUntil: "networkidle" });
+await page.waitForTimeout(1200);
+await page.screenshot({ path: "public/og.png" });
+await browser.close();
+console.log("og.png written");

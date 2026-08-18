@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Personal projects | Peyton Lindogan</title>
+<meta name="description" content="Personal projects by Peyton Lindogan: Contour, a live music analytics platform; The Case Against Relaunches, a statistical business case; graduate work on fisheries data suppression and NBA coaching interpretability." />
+<link rel="canonical" href="https://peytonhl.github.io/Peyton_Lindogan_Resume/projects.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Personal projects | Peyton Lindogan" />
+<meta property="og:description" content="A live production app, a statistical business case, and graduate data work." />
+<meta property="og:image" content="https://peytonhl.github.io/Peyton_Lindogan_Resume/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#05070a" />
+<link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <a class="topbar__mark" href="./"><span class="bolt" aria-hidden="true"></span> Peyton Lindogan</a>
+  <nav class="topbar__nav" aria-label="Primary">
+    <a href="./#experience">Experience</a>
+    <a href="./projects.html" aria-current="page">Projects</a>
+    <a href="./#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero hero--sub">
+    <div class="hero__inner">
+      <div class="hero__kicker">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="mono">Personal projects</span>
+        <span class="mono">4 builds</span>
+      </div>
+      <h1>Things I built <em>outside the job</em>.</h1>
+      <p class="hero__sub">
+        Two of these prove different claims. Contour is a production system with real
+        users, which is how I know what it costs to keep a data product alive. The Case
+        Against Relaunches is an argument built to be falsifiable, which is how I know
+        what it costs to defend one. The other two are graduate and university work.
+      </p>
+      <div class="hero__cta">
+        <a class="btn" href="./">Back to experience</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── contour ──────────────────────────────────────────── -->
+  <section class="section section--wide" id="contour">
+    <div class="section__rail" aria-hidden="true"></div>
+    <div class="section__node" aria-hidden="true"></div>
+    <div class="section__head reveal">
+      <span class="section__num mono">01 / Flagship</span>
+    </div>
+
+    <div class="projects reveal">
+      <article class="project">
+        <div class="project__body">
+          <div class="project__head">
+            <h3>Contour</h3>
+            <span class="tag tag--live">Live in production</span>
+            <span class="tag">Solo build</span>
+            <span class="tag tag--private">Source private</span>
+          </div>
+          <p class="project__what">
+            A music ratings, reviews and streaming analytics platform. Rate albums and
+            tracks, follow people whose taste you trust, and compare any two releases on
+            era adjusted stream counts. Live on the web and inside an iOS shell.
+          </p>
+
+          <div class="project__grid">
+            <div>
+              <h4>The idea</h4>
+              <p>
+                Spotify had a few million users in 2008 and has more than 800 million now.
+                A song that hit 500 million streams in 2016 did it on a much smaller
+                platform, so raw stream counts quietly flatter recent releases. Contour
+                normalizes every count against the platform's monthly active users at
+                release time, which makes a 2012 record and a 2024 record comparable for
+                the first time.
+              </p>
+            </div>
+            <div>
+              <h4>What it proves</h4>
+              <p>
+                That I can specify, build, ship and then operate a data product end to
+                end. The interesting half is not the first release, it is the two years of
+                keeping a catalog accurate against third party APIs that rate limit hard,
+                change their terms, and strip fields without notice.
+              </p>
+            </div>
+          </div>
+
+          <div class="project__grid">
+            <div>
+              <h4>Engineering worth naming</h4>
+              <ul>
+                <li>A personalized feed with two collaborative filtering tiers reading precomputed neighbor tables, popularity normalized so mega hits cannot bridge dissimilar users.</li>
+                <li>A Redis persistent circuit breaker with half open recovery, written after a burst of requests earned a credential wide rate limit block that survived redeploys.</li>
+                <li>Roughly a dozen background workers that repair catalog data with no external calls, using agreement between editions the catalog already holds.</li>
+                <li>Health endpoints that report worker <em>progress</em>, not liveness, after a worker ticked for 44 hours doing no useful work and looked perfectly healthy.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Stack</h4>
+              <div class="chips">
+                <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">SQLAlchemy async</span>
+                <span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Alembic</span>
+                <span class="chip">React</span><span class="chip">Vite</span><span class="chip">Recharts</span>
+                <span class="chip">Railway</span><span class="chip">Vercel</span><span class="chip">Capacitor iOS</span>
+              </div>
+              <h4 style="margin-top: 22px;">Honest note</h4>
+              <p>
+                The repository is private because it holds provider credentials handling
+                and unreleased work. Happy to walk through the architecture, or share
+                access, on request.
+              </p>
+            </div>
+          </div>
+
+          <div class="project__links">
+            <a class="btn btn--primary" href="https://contourmusic.app" target="_blank" rel="noopener">Open the live app</a>
+            <a class="btn" href="mailto:peyton2117@gmail.com?subject=Contour%20architecture">Ask about the architecture</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── relaunches ───────────────────────────────────────── -->
+  <section class="section section--wide" id="relaunches">
+    <div class="section__rail" aria-hidden="true"></div>
+    <div class="section__node" aria-hidden="true"></div>
+    <div class="section__head reveal">
+      <span class="section__num mono">02 / Argument</span>
+    </div>
+
+    <div class="projects reveal">
+      <article class="project">
+        <div class="project__body">
+          <div class="project__head">
+            <h3>The Case Against Relaunches</h3>
+            <span class="tag">Public repo</span>
+            <span class="tag">Solo build</span>
+          </div>
+          <p class="project__what">
+            An interactive data product arguing that Marvel's relaunch publishing model
+            erodes long term franchise IP value, and that the comics pipeline is the
+            upstream half of a thirty billion dollar film business. Eight sections, built
+            like an executive brief rather than a notebook.
+          </p>
+
+          <div class="project__grid">
+            <div>
+              <h4>Method</h4>
+              <ul>
+                <li>Welch's two sample t test comparing Rotten Tomatoes scores for films built on deep versus thin comic source material, with 95% confidence intervals and Cohen's d.</li>
+                <li>OLS regression fitted per relaunch volume on confirmed sales data, with the slope read as thousands of copies lost per issue.</li>
+                <li>Original datasets compiled from Comichron, Box Office Mojo and the ComicVine API into a committed SQLite snapshot, so the app runs with no keys.</li>
+              </ul>
+            </div>
+            <div>
+              <h4>What it found</h4>
+              <ul>
+                <li>Films built on deep source material score about 26 Rotten Tomatoes points higher on average than films built on thin material.</li>
+                <li>The Avengers line lost 56% of sustained readership across four relaunch cycles.</li>
+                <li>Average Amazing Spider-Man writer tenure has fallen to 2.4 years since 2018, compressing the runway that produced the adaptable material.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project__grid">
+            <div>
+              <h4>Why the caveats section matters</h4>
+              <p>
+                Every figure is labelled confirmed, estimate or publisher estimate, and the
+                appendix says plainly where the argument is weakest: about thirty films is a
+                small sample, source depth classification is my judgment, and correlation
+                here does not establish that the comics caused the film quality. An argument
+                that hides its weak points is not an argument, it is a pitch.
+              </p>
+            </div>
+            <div>
+              <h4>Stack</h4>
+              <div class="chips">
+                <span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">Plotly</span>
+                <span class="chip">Pandas</span><span class="chip">SciPy</span><span class="chip">NumPy</span><span class="chip">SQLite</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project__links">
+            <a class="btn btn--primary" href="https://github.com/peytonhl/The-Case-Against-Relaunches" target="_blank" rel="noopener">View the repository</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── academic ─────────────────────────────────────────── -->
+  <section class="section section--wide" id="academic">
+    <div class="section__rail" aria-hidden="true"></div>
+    <div class="section__node" aria-hidden="true"></div>
+    <div class="section__head reveal">
+      <span class="section__num mono">03 / Academic</span>
+      <h2>Graduate and university work</h2>
+    </div>
+
+    <div class="projects reveal">
+      <article class="project">
+        <div class="project__body">
+          <div class="project__head">
+            <h3>What confidentiality costs public fisheries data</h3>
+            <span class="tag">Berkeley MIDS</span>
+            <span class="tag">DATASCI 200</span>
+            <span class="tag">Team of 3</span>
+          </div>
+          <p class="project__what">
+            California publishes commercial fishery landings from roughly fifty thousand
+            receipts a year, then suppresses any record representing fewer than three
+            fishermen, vessels or businesses. This analysis takes California Halibut from
+            2015 to 2025 and asks what that rule actually costs a researcher.
+          </p>
+          <div class="project__grid">
+            <div>
+              <h4>The argument</h4>
+              <p>
+                Suppression is not evenly spread. It concentrates by port, gear type and
+                use category, so published totals read lower than true statewide landings
+                and fine grained analysis quietly becomes unreliable. The final section
+                simulates progressively broader geographic groupings to show that a
+                slightly coarser aggregation would preserve the same privacy while
+                returning most of the dataset's usefulness.
+              </p>
+            </div>
+            <div>
+              <h4>Stack</h4>
+              <div class="chips">
+                <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Jupyter</span><span class="chip">Matplotlib</span><span class="chip">CDFW open data</span>
+              </div>
+            </div>
+          </div>
+          <div class="project__links">
+            <a class="btn" href="https://github.com/peytonhl/UCB-I-School-200-Final-Project" target="_blank" rel="noopener">View the repository</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__body">
+          <div class="project__head">
+            <h3>Interpretability of head coaching impact in the NBA</h3>
+            <span class="tag">UNC</span>
+            <span class="tag">Team of 3</span>
+            <span class="tag">2024</span>
+          </div>
+          <p class="project__what">
+            How much of a team's performance can be attributed to the head coach once
+            advanced player statistics are accounted for. Data cleaning and modeling in R,
+            written up as a full report.
+          </p>
+          <div class="project__grid">
+            <div>
+              <h4>Why it is still here</h4>
+              <p>
+                It is the earliest piece of work where I cared more about whether a model
+                could be explained than whether it fit. That preference is the throughline
+                to everything above it on this page.
+              </p>
+            </div>
+            <div>
+              <h4>Stack</h4>
+              <div class="chips">
+                <span class="chip">R</span><span class="chip">R Markdown</span><span class="chip">Advanced NBA statistics</span>
+              </div>
+            </div>
+          </div>
+          <div class="project__links">
+            <a class="btn" href="https://github.com/peytonhl/Head-Coaching-Interpretability-Project" target="_blank" rel="noopener">View the repository</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── contact ──────────────────────────────────────────── -->
+  <section class="section section--wide" id="contact">
+    <div class="section__rail" aria-hidden="true"></div>
+    <div class="section__node" aria-hidden="true"></div>
+    <div class="section__head reveal">
+      <span class="section__num mono">04 / Contact</span>
+      <h2>Want the long version of any of these?</h2>
+    </div>
+    <div class="contact reveal">
+      <div class="contact__lines">
+        <a class="contact__line" href="mailto:peyton2117@gmail.com"><span>Email</span><span>peyton2117@gmail.com</span></a>
+        <a class="contact__line" href="https://www.linkedin.com/in/peyton-lindogan/" target="_blank" rel="noopener"><span>LinkedIn</span><span>in/peyton-lindogan</span></a>
+        <a class="contact__line" href="https://github.com/peytonhl" target="_blank" rel="noopener"><span>GitHub</span><span>github.com/peytonhl</span></a>
+      </div>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="./">Back to experience</a>
+        <a class="btn" href="./Peyton-Lindogan-Resume.pdf" download>Download resume</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Peyton Lindogan · Palm Beach Gardens, FL · <span data-year></span></p>
+  <p>Built with Vite, deployed on GitHub Pages. Source is public.</p>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
