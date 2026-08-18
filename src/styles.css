@@ -169,9 +169,9 @@ strong { color: var(--text); font-weight: 600; }
   font-family: var(--font-mono); font-size: 11px; color: var(--text-3);
 }
 .swatch { width: 16px; height: 0; flex: none; }
-.swatch--net { border-top: 2px solid var(--amber); }
-.swatch--gross { border-top: 1.5px dashed rgba(122, 160, 190, 0.85); }
-.swatch--solar { height: 10px; background: rgba(247, 183, 51, 0.16); border: 1px solid rgba(247, 183, 51, 0.3); }
+.swatch--actual { border-top: 2px solid var(--amber); }
+.swatch--plan { border-top: 1.5px dotted rgba(160, 180, 198, 0.85); }
+.swatch--band { height: 10px; background: rgba(122, 160, 190, 0.18); border: 1px dashed rgba(122, 160, 190, 0.55); }
 
 .chart__note {
   margin-top: 14px; padding-top: 13px; border-top: 1px solid var(--line-soft);

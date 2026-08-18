@@ -94,19 +94,20 @@
 
       <figure class="chart">
         <div class="chart__head">
-          <span class="chart__title">Net load, spring day</span>
-          <span class="chart__unit">GW by hour</span>
+          <span class="chart__title">Forecast vs actuals</span>
+          <span class="chart__unit">Indexed, plan = 100</span>
         </div>
-        <canvas id="netload" role="img" aria-label="Daily load curve. Gross demand peaks in the evening near 39 gigawatts. Midday solar pushes net load down to roughly 18 gigawatts, then falls away, producing a steep three hour evening ramp."></canvas>
+        <canvas id="forecast" role="img" aria-label="A year of forecast against actuals, indexed so that plan equals 100. A forecast range widens through the year. The actual line tracks inside it until August, when it drops below the range and is flagged, then recovers by October."></canvas>
         <div class="chart__legend">
-          <span><i class="swatch swatch--gross" aria-hidden="true"></i>Gross load</span>
-          <span><i class="swatch swatch--net" aria-hidden="true"></i>Net load after solar</span>
-          <span><i class="swatch swatch--solar" aria-hidden="true"></i>Solar</span>
+          <span><i class="swatch swatch--plan" aria-hidden="true"></i>Plan</span>
+          <span><i class="swatch swatch--band" aria-hidden="true"></i>Forecast range</span>
+          <span><i class="swatch swatch--actual" aria-hidden="true"></i>Actual</span>
         </div>
         <figcaption class="chart__note">
-          Illustrative shape, not measured data. The midday belly is solar. The evening
-          ramp is what the rest of the system has to cover when it drops, and that ramp is
-          most of what my work is actually about.
+          The shape of the product I lead: forecast to actuals across 4 core models,
+          compared every month instead of once at the end of an 8 month cycle. The month
+          the actual leaves the range is the month somebody needs to know. Indexed to plan
+          rather than shown in dollars, which is the same rule the rest of this page follows.
         </figcaption>
       </figure>
     </div>

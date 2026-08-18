@@ -1,7 +1,7 @@
 import "./styles.css";
-import { mountNetLoad } from "./netload.js";
+import { mountForecast } from "./forecast.js";
 
-mountNetLoad(document.getElementById("netload"));
+mountForecast(document.getElementById("forecast"));
 
 /* Current runs the conductor of whichever section you are reading. This is
    the one motion kept: it is the diagram doing what the diagram depicts,
